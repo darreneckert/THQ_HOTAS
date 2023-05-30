@@ -13,12 +13,18 @@
 
 int i;                                // Generic counter variable
 const int HID_ID = 0x26;              // Unique HID Device ID, randomly chosen
-const int uBtns = 5;                  // Number of buttons on the device
-const int tDelay = 25;                    // Time delay for loop() in ms
+const int uBtns = 9;                  // Number of buttons on the device
+const int hBtns = 4;                  // Hat switches Up, Down, Left Right
+const int tDelay = 50;                // Time delay for loop() in ms
 
 // Define digital pin to be used for each button
-// const int sTDC  = 2;               // Digital Pin for TDC push button
-int sBtn[uBtns] = {3, 4, 5, 6, 7};    // Digital Pins for buttons/switches
+int sHat[hBtns] = {0, 3, 4, 2};       // 5-Way Hat U/R/D/L
+int sBtn[uBtns] = {1,                 // 5-Way Hat Push switch
+                   15,                // TDC Push switch
+                   6, 7,              // 2-Way Speedbrake switch
+                   8, 9,              // 2-Way Comms switch
+                   10, 14, 16};        // 3-Way ??? switch
+
 
 // Define Analog pins for each axis
 const int xTDC_Axis  = A0;            // Analog pin for TDC X-Axis
@@ -29,25 +35,27 @@ const int yTDC_Axis  = A1;            // Analog pin for TDC Y-Axis
 int xTDC = 0;
 int yTDC = 0;
 
-// int sTDC_CurrState;
-// int sTDC_LastState = 0;
+bool hVal_Changed = false;
+int sBtn_CurrState, hBtn_CurrState;
+int sBtn_LastState[uBtns] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+int hBtn_LastState[hBtns] = {0, 0, 0, 0};
 
-int sBtn_CurrState;
-int sBtn_LastState[uBtns] = {0, 0, 0, 0, 0};
 
 // Joystick (HID ID, Type, Buttons, Hats, X-Aix, Y-Axis, Z-Axis, Rx-Axis, Ry-Axis, Rz-Axis, Rudder, Throttle, Accelerator, Brake, Steering);
-Joystick_ THQ(HID_ID, JOYSTICK_TYPE_JOYSTICK, uBtns, 0, true, true, false, false, false, false, false, false, false, false, false);
+Joystick_ THQ(HID_ID, JOYSTICK_TYPE_JOYSTICK, uBtns, 1, true, true, false, false, false, false, false, false, false, false, false);
 const bool initAutoSendState = true;
 
 
 void setup() {
   // Initialise digital pin modes and enable pull-up resistors
-  /* pinMode(sTDC, INPUT);
-     digitalWrite(sTDC, HIGH); */
-
   for (i=0; i<uBtns; i++) {
     pinMode(sBtn[i], INPUT);
     digitalWrite (sBtn[i], HIGH);
+  }
+
+  for (i=0; i<hBtns; i++) {
+    pinMode(sHat[i], INPUT);
+    digitalWrite (sHat[i], HIGH);
   }
 
   THQ.begin(initAutoSendState);
@@ -65,13 +73,45 @@ void loop() {
   yTDC = map(yTDC, 0, 1023, 0, 255);  // scale resolution to reduce jittering, need to test if necessary
   THQ.setYAxis(yTDC);
 
-  // Read button states and send to HID
-  /* sTDC_CurrState = digitalRead(sTDC);
-     if (sTDC_CurrState != sTDC_LastState) {
-       THQ.setButton (0, sTDC_CurrState);
-       sTDC_LastState = sTDC_CurrState;
-  } */
+  // Check for change in state of each hat direction and if it has changed send new state to HID
+  for (i=0; i<hBtns; i++)  {
+    hBtn_CurrState = !digitalRead(sHat[i]);
+    if (hBtn_CurrState != hBtn_LastState[i]) {
+      hVal_Changed = true;
+      hBtn_LastState[i] = hBtn_CurrState;
+    }
+  }
 
+  // Something has changed since last check
+  if (hVal_Changed) {
+    // No switch is currently active, release hat switch
+    if ((hBtn_LastState[0] == 0) && 
+        (hBtn_LastState[1] == 0) &&
+        (hBtn_LastState[2] == 0) &&
+        (hBtn_LastState[3] == 0)) {
+          THQ.setHatSwitch(0, -1);
+        }
+
+    // Up Switch pressed
+    if (hBtn_LastState[0] == 1) {
+      THQ.setHatSwitch(0, 0);
+    }
+    // Right Switch pressed
+    if (hBtn_LastState[1] == 1) {
+      THQ.setHatSwitch(0, 90);
+    }
+    // Down Switch pressed
+    if (hBtn_LastState[2] == 1) {
+      THQ.setHatSwitch(0, 180);
+    }
+    // Left Switch pressed
+    if (hBtn_LastState[3] == 1) {
+      THQ.setHatSwitch(0, 270);
+    }
+
+  }
+
+  // Check for change in state of each button and if it has changed send new state to HID
   for (i=0; i<uBtns; i++) {
     sBtn_CurrState = digitalRead(sBtn[i]);
     if (sBtn_CurrState != sBtn_LastState[i]) {
