@@ -1,0 +1,17 @@
+Circuit Board Dimensions (approx.)
+
+Main Board
+Length = 45mm
+Width  = 31mm
+
+5_Way Hat Board
+Length = 24mm
+Width  = 17mm
+
+Switches Board
+Length = 23mm
+Width  = 22mm
+
+Total Sheet size
+Length = 45mm
+Width  = 60mm

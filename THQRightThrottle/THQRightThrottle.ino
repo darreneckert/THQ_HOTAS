@@ -14,16 +14,16 @@
 int i;                                // Generic counter variable
 const int HID_ID = 0x26;              // Unique HID Device ID, randomly chosen
 const int uBtns = 9;                  // Number of buttons on the device
-const int hBtns = 4;                  // Hat switches Up, Down, Left Right
-const int tDelay = 50;                // Time delay for loop() in ms
+const int hBtns = 4;                  // Hat switches Up, Right, Down, Left
+const int tDelay = 50;                // Time delay for loop() in ms, may need adjusting
 
-// Define digital pin to be used for each button
+// Define digital pin to be used for each  button
 int sHat[hBtns] = {0, 3, 4, 2};       // 5-Way Hat U/R/D/L
-int sBtn[uBtns] = {1,                 // 5-Way Hat Push switch
-                   15,                // TDC Push switch
-                   6, 7,              // 2-Way Speedbrake switch
-                   8, 9,              // 2-Way Comms switch
-                   10, 14, 16};        // 3-Way ??? switch
+int sBtn[uBtns] = {1,                 // 5-Way Hat Push switch,   HID button 0
+                   15,                // TDC Push switch,         HID button 1
+                   6, 7,              // 2-Way Speedbrake switch, HID buttons 2 and 3
+                   8, 9,              // 2-Way Comms switch,      HID buttons 3 and 4
+                   10, 14, 16};       // 3-Way Misc switch,       HID buttons 5, 6 and 7
 
 
 // Define Analog pins for each axis

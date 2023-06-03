@@ -4,22 +4,23 @@
 	2x Alps SKHHAQA010
 	1x Cap #A
 	1x Stem #A
-	1x Body #A/#B
+	1x Body #A
 	1x Hat Cap SB
 	
 2-Way switch parts (Comms)
 	2x Alps SKHHAQA010
 	1x Cap #A
 	1x Stem #A
-	1x Body #A/#B
+	1x Body #A
 	1x Hat Cap Comms
 	
-2-Way switch parts (Disp)
-	2x Alps SKHHAQA010
+3-Way switch parts (Misc)
+	3x Alps SKHHAQA010
 	1x Cap #A
 	1x Stem #A
-	1x Body #A/#B
-	1x Hat Cap Boat/China
+	1x Body #A
+	1x Bottom #A
+	1x Hat Cap Boat
 
 5-Way switch parts
 	5x Alps SKHHAQA010
@@ -27,17 +28,18 @@
 	1x Stem #C
 	1x Body #D
 	1x Bottom #A
-	1x Hat Cap TDC #1/TDC #2/Castle/Stadium
+	1x Hat Cap Stadium
 
 Totals
-	11x Alps SKHHAQA010
-	3x Cap #A
-	3x Stem #A
-	1x Stem #C
-	3x Body #A/#B
-	1x Body #D
-	1x Bottom #A
-	1x Hat Cap SB
-	1x Hat Cap Comms
-	1x Hat Cap Boat/China
-	1x Hat Cap TDC #1/TCD #2/Castle/Stadium
+	12x Alps SKHHAQA010
+	3x  Cap #A
+	1x  Cap #D
+	3x  Stem #A
+	1x  Stem #C
+	3x  Body #A/#B
+	1x  Body #D
+	2x  Bottom #A
+	1x  Hat Cap SB
+	1x  Hat Cap Comms
+	1x  Hat Cap Boat
+	1x  Hat Cap Stadium
