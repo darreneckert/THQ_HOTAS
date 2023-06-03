@@ -1,0 +1,8 @@
+Quantity,Designators,Value,Device,Package
+2,"J_2WAY1, J_2WAY2",,Generic Pin Socket 2.54mm 1x03 ⌀1.0mm,Pin Socket 2.54mm 1x03 ⌀1.0mm
+1,J_3WAY,,Generic Pin Socket 2.54mm 1x04 ⌀1.0mm,Pin Socket 2.54mm 1x04 ⌀1.0mm
+5,"J_DOWN, J_LEFT, J_PUSH, J_RIGHT, J_UP",,Generic Pin Header 2.54mm 1x02 ⌀1.0mm,Pin Header 2.54mm 1x02 ⌀1.0mm
+2,"J_HAT, J_HAT2",,Generic Pin Header 2.54mm 1x06 ⌀1.0mm,Pin Header 2.54mm 1x06 ⌀1.0mm
+2,"J_SWITCHES, J_SWITCHES2",,Generic Pin Header 2.54mm 1x08 ⌀1.0mm,Pin Header 2.54mm 1x08 ⌀1.0mm
+1,J_TDC,,Generic Pin Header 2.54mm 1x05 ⌀1.0mm,Pin Header 2.54mm 1x05 ⌀1.0mm
+1,U_PRO_MICRO,,Pro Micro - Micro USB,Pro Micro - Micro USB

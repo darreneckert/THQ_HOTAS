@@ -5,17 +5,19 @@
 // by Marco (@Marco_596178) at Printerbale.com which can be found 
 // here - https://www.printables.com/model/405514-vkb-thq-hotas-throttle
 //
+// This sketch is for the right throttle controls 
+//
 // Darren Eckert
 // 2023-05-18
 // Version 0.1
 
 #include <Joystick.h>
 
-int i;                                // Generic counter variable
-const int HID_ID = 0x26;              // Unique HID Device ID, randomly chosen
-const int uBtns = 9;                  // Number of buttons on the device
-const int hBtns = 4;                  // Hat switches Up, Right, Down, Left
+const int HID_ID = 0x26;              // Unique HID Device ID for this arduino
+const int uBtns  = 9;                 // Number of buttons on the device
+const int hBtns  = 4;                 // Hat switches Up, Right, Down, Left
 const int tDelay = 50;                // Time delay for loop() in ms, may need adjusting
+int i;                                // Generic counter
 
 // Define digital pin to be used for each  button
 int sHat[hBtns] = {0, 3, 4, 2};       // 5-Way Hat U/R/D/L

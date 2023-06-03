@@ -1,0 +1,15 @@
+M48
+; #@! TF.GenerationSoftware,LibrePCB,LibrePCB,0.1.7
+; #@! TF.CreationDate,2023-06-03T19:18:22
+; #@! TF.ProjectId,THQRightThrottle,1801acc5-9244-403a-a77d-ebbcc31c52c0,v1
+; #@! TF.Part,Single
+; #@! TF.SameCoordinates
+; #@! TF.FileFunction,NonPlated,1,2,NPTH
+FMAT,2
+METRIC,TZ
+%
+G90
+G05
+M71
+T0
+M30
