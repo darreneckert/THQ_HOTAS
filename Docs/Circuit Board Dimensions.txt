@@ -1,17 +1,13 @@
 Circuit Board Dimensions (approx.)
 
 Main Board
-Length = 42mm
-Width  = 32mm
+Length = 43mm
+Width  = 33mm
 
 5_Way Hat Board
-Length = 24mm
-Width  = 17mm
+Length = 23mm
+Width  = 20mm
 
 Switches Board
-Length = 23mm
-Width  = 22mm
-
-Total Sheet size
-Length = 45mm
-Width  = 60mm
+Length = 26mm
+Width  = 25mm

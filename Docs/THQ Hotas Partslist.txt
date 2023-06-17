@@ -4,7 +4,7 @@ THQ Throttle bodies - https://www.printables.com/model/405514-vkb-thq-hotas-thro
 
 Hat Switches (2x 2-Way, 1x 3-Way, 1x 5-Way) - https://www.thingiverse.com/thing:3641494
 
-12x 0.7mm SPST Micro Tactile Switch (Specs seem to match Alps SKHHAQA010, but need to confirm) - https://www.jaycar.com.au/0-7mm-spst-micro-tactile-switch/p/SP0600
+12x 0.7mm SPST Micro Tactile Switch - https://www.jaycar.com.au/0-7mm-spst-micro-tactile-switch/p/SP0600
 
 Arduino 2-Axis joystick module (Cap protrudes quite a bit, may need to find alternative cap/module) - https://www.jaycar.com.au/arduino-compatible-x-and-y-axis-joystick-module/p/XC4422
 
