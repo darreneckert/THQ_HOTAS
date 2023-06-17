@@ -1,0 +1,125 @@
+{
+  "uuid": "f19d3d11b7d5b01e428d3e8c7eec78a2",
+  "path": "Offline/THQ%20Right%20Throttle%20Main%20Board",
+  "name": "THQ Right Throttle Main Board",
+  "content": "",
+  "created_at": "2023-06-04 12:28:46",
+  "updated_at": "2023-06-17 20:11:12",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "aacb19870ac25d681a6148e88f3dc70f",
+      "title": "Main_Board",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "a9f833c4f5ea4541a6a3dec445e11128": 1,
+        "d31303e17e1f4c979d6496ed351c2730": 1,
+        "0999732c6c2d4d618939a1a115337f85": 1,
+        "673daeb333a344c98e5613b1879eb05d": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Male-2.54_1x6",
+          1,
+          "HEADER-MALE-2.54_1X6",
+          "J_HAT",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "f9ba132bc5484961b4e8b9bdae30902f",
+            "uuid": "a9f833c4f5ea4541a6a3dec445e11128"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x8",
+          1,
+          "HEADER-MALE-2.54_1X8",
+          "J_SWITCHES",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "89f178ce6e8047928551eab7128d4352",
+            "uuid": "d31303e17e1f4c979d6496ed351c2730"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x5",
+          1,
+          "HEADER-MALE-2.54_1X5",
+          "J_TDC",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "a3d3973f0327482c91c37da8fa70f189",
+            "uuid": "0999732c6c2d4d618939a1a115337f85"
+          }
+        ],
+        [
+          "ARDUINO pro micro ATmega32U4",
+          1,
+          "ARDUINOPROMICRO",
+          "U_CTRLR",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "10e01c7b031d4b08906e60b1db65df23",
+            "uuid": "673daeb333a344c98e5613b1879eb05d"
+          }
+        ]
+      ],
+      "updateTime": 1686996547,
+      "createTime": 1685845726,
+      "histories": [],
+      "created_at": "2023-06-04 12:28:46",
+      "updated_at": "2023-06-17 20:09:07"
+    },
+    {
+      "uuid": "6c5a847ff39c85550b4369422448cf36",
+      "puuid": "f19d3d11b7d5b01e428d3e8c7eec78a2",
+      "title": "PCB_THQ Right Throttle Main Board",
+      "filename": "PCB_THQ Right Throttle Main Board.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f9ba132bc5484961b4e8b9bdae30902f": 1,
+        "89f178ce6e8047928551eab7128d4352": 1,
+        "a3d3973f0327482c91c37da8fa70f189": 1,
+        "10e01c7b031d4b08906e60b1db65df23": 1
+      },
+      "BOM": [],
+      "updateTime": 1686996672,
+      "createTime": 1686996133,
+      "histories": [],
+      "created_at": "2023-06-17 20:02:13",
+      "updated_at": "2023-06-17 20:11:12"
+    }
+  ],
+  "sort": [
+    "aacb19870ac25d681a6148e88f3dc70f",
+    "b7bf1c93019298de986af821fbfef481"
+  ],
+  "title": "THQ Right Throttle Main Board",
+  "foldername": "THQ Right Throttle Main Board",
+  "schfilename": "THQ Right Throttle Main Board.json",
+  "schfilemtime": 1686996547372
+}
