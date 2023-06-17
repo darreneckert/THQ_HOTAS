@@ -2,6 +2,11 @@
  (name "Main")
  (grid (type lines) (interval 2.54) (unit millimeters))
 
+ (symbol 485663fe-f1bd-46db-a8dc-83b8bf51863c
+  (component d415674b-73eb-49b1-ad6c-5cd7b0545fe8)
+  (lib_gate 09b6d6c4-2d37-432f-9471-a317aad9a499)
+  (position -30.48 -15.24) (rotation 90.0) (mirror false)
+ )
  (symbol 65897e21-527c-4963-9527-699f6e59a5b5
   (component f91f1629-2093-454a-9036-fa27ef7ad450)
   (lib_gate 90b39358-a9f5-4e91-8fe7-5afe0ae2774c)
@@ -21,6 +26,11 @@
   (component 7d0af972-d35f-4bf9-a293-911bcf41a515)
   (lib_gate cabb2117-b73f-4818-9db7-57083d4bd8ba)
   (position 0.0 0.0) (rotation 0.0) (mirror false)
+ )
+ (symbol f642dce9-2219-4d53-8425-d0796789b541
+  (component 49d00bb8-ad86-46bd-bad8-3582187c9352)
+  (lib_gate 0539fd52-890f-48af-97a9-bacfb79c9475)
+  (position -22.86 -22.86) (rotation 0.0) (mirror false)
  )
 
  (netsegment 08f51fe9-eee2-4d59-8d0c-6afd6bce0f78
@@ -126,9 +136,13 @@
   )
  )
  (netsegment 37ebb437-4520-45be-b968-15a8b48df045
-  (net bfe8ff0d-f1d3-45aa-9539-032c41047c7d)
+  (net 4ec8cc8f-a26a-472c-b00f-d271fa6913d2)
   (junction dc372181-4801-43a3-a784-1a5026de354b (position -20.32 -15.24))
   (junction e9644113-8b92-4eae-acf8-96f9cc0e5540 (position -20.32 -2.54))
+  (line 4eecde7e-4d0b-49d3-9b0e-7ac3aaa0d9de (width 0.15875)
+   (from (symbol 485663fe-f1bd-46db-a8dc-83b8bf51863c) (pin 771c2d8b-e4ad-487b-bcb1-fe2bc10c8a03))
+   (to (junction dc372181-4801-43a3-a784-1a5026de354b))
+  )
   (line 9d55fe96-109e-4161-8ab8-eb0e51c3e50e (width 0.15875)
    (from (symbol f4100167-f50a-44a1-bd0f-d7d173f3278b) (pin a623c68a-8166-482a-acc4-2de49e0b9c27))
    (to (junction dc372181-4801-43a3-a784-1a5026de354b))
@@ -259,7 +273,7 @@
   )
  )
  (netsegment d9146717-afd1-4031-98b2-71774515c695
-  (net e7ea5e5c-2df8-4bdf-af33-dc4d4bd19714)
+  (net d1a1dd10-b2ee-4a33-a79c-cea12ba69e7d)
   (junction 68107c36-0ed9-419f-ae7e-ef6c412d3d22 (position -15.24 -25.4))
   (junction 70a68744-0e3f-4b32-809b-6c74211d9c47 (position 30.48 -17.78))
   (junction 8003c7f0-8142-46fa-b899-589bb5acf5dc (position -22.86 -17.78))
@@ -306,6 +320,10 @@
   (line d3b923f2-0e70-4715-ae45-596c669b8c64 (width 0.15875)
    (from (junction 70a68744-0e3f-4b32-809b-6c74211d9c47))
    (to (junction e001feb3-41ba-48e9-83e2-c000568f0610))
+  )
+  (line f75535a7-1019-4110-999f-c1c444bc267f (width 0.15875)
+   (from (symbol f642dce9-2219-4d53-8425-d0796789b541) (pin abcc319b-d09f-437b-a624-3dcf3eff5792))
+   (to (junction 8003c7f0-8142-46fa-b899-589bb5acf5dc))
   )
  )
  (netsegment fcec9f86-c788-400a-b8eb-0eb7c8a9a650

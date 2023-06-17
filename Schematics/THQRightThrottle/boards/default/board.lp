@@ -255,7 +255,7 @@
  )
 
  (netsegment 1df21a66-f5fa-4bf2-b816-cfa608f98ddf
-  (net bfe8ff0d-f1d3-45aa-9539-032c41047c7d)
+  (net 4ec8cc8f-a26a-472c-b00f-d271fa6913d2)
   (trace 15fe05fa-f3e1-4f50-ae45-de3f0ed0aacb (layer top_cu) (width 0.5)
    (from (device 7d0af972-d35f-4bf9-a293-911bcf41a515) (pad fd85ede1-d273-4964-b553-c5e93b562c9c))
    (to (device 1171ec34-b580-4d03-a9dc-c1a57da57727) (pad a710dfcd-b548-4d4d-b25d-4d79ef7e7346))
@@ -472,7 +472,7 @@
   )
  )
  (netsegment 888c70ae-54c5-4b92-b704-0aad5d9ed135
-  (net e7ea5e5c-2df8-4bdf-af33-dc4d4bd19714)
+  (net d1a1dd10-b2ee-4a33-a79c-cea12ba69e7d)
   (junction 1f80897b-46e7-4b73-bc05-0f658e1ca97c (position 10.795 8.255))
   (junction 992e8df3-a1ec-4160-8af4-2e16044c2c0e (position 5.08 5.715))
   (junction a6e93dd2-a5fb-47ee-abd4-675dd89903da (position 5.08 8.255))

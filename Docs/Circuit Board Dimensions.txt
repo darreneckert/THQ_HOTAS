@@ -1,8 +1,8 @@
 Circuit Board Dimensions (approx.)
 
 Main Board
-Length = 45mm
-Width  = 31mm
+Length = 42mm
+Width  = 32mm
 
 5_Way Hat Board
 Length = 24mm

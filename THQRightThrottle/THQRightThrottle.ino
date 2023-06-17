@@ -8,10 +8,12 @@
 // This sketch is for the right throttle controls 
 //
 // Darren Eckert
-// 2023-05-18
-// Version 0.1
+// 2023-06-12
+// Version 0.2
 
 #include <Joystick.h>
+#define DEBUGTHQ TRUE
+
 
 const int HID_ID = 0x26;              // Unique HID Device ID for this arduino
 const int uBtns  = 9;                 // Number of buttons on the device
@@ -61,6 +63,10 @@ void setup() {
   }
 
   THQ.begin(initAutoSendState);
+
+  #ifdef DEBUGTHQ
+    Serial.begin(9600);
+  #endif
 }
 
 void loop() {
@@ -97,6 +103,9 @@ void loop() {
     // Up Switch pressed
     if (hBtn_LastState[0] == 1) {
       THQ.setHatSwitch(0, 0);
+      #ifdef DEBUGTHQ 
+        Serial.println("POV Up pressed!"); 
+      #endif
     }
     // Right Switch pressed
     if (hBtn_LastState[1] == 1) {
@@ -115,10 +124,22 @@ void loop() {
 
   // Check for change in state of each button and if it has changed send new state to HID
   for (i=0; i<uBtns; i++) {
-    sBtn_CurrState = digitalRead(sBtn[i]);
+    sBtn_CurrState = !digitalRead(sBtn[i]);
     if (sBtn_CurrState != sBtn_LastState[i]) {
       THQ.setButton(i, sBtn_CurrState);
-      sBtn_LastState[i] = sBtn_CurrState;    
+      sBtn_LastState[i] = sBtn_CurrState;  
+      #ifdef DEBUGTHQ
+        if (sBtn_CurrState == HIGH) {
+          Serial.print("Button ");
+          Serial.print(i);
+          Serial.println(" pressed");
+        }
+        if (sBtn_CurrState == LOW) {
+          Serial.print("Button ");
+          Serial.print(i);
+          Serial.println(" released");
+        }
+      #endif
     }
   }
 
