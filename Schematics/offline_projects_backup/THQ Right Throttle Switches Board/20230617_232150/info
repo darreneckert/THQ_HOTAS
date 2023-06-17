@@ -1,0 +1,109 @@
+{
+  "uuid": "6066edd8125716f79e729fba1da73f70",
+  "path": "Offline/THQ%20Right%20Throttle%20Switches%20Board",
+  "name": "THQ Right Throttle Switches Board",
+  "content": "",
+  "created_at": "2023-06-04 15:00:22",
+  "updated_at": "2023-06-17 23:21:50",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "8439d81a19efa5c5476f870572ffbc58",
+      "title": "Switches Board",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "58557ab5dac544259249b4981dd6020c": 1,
+        "21f8f80a3f7c3c2b00b33f71a31ff6ef": 2,
+        "c99800e04af1474aaf1069c95dc7e57a": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Male-2.54_1x3",
+          2,
+          "HDR-TH_3P-P2.54-V-M-1",
+          "J_BOAT1,J_SB1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE(博穆精密)",
+            "BOM_Manufacturer Part": "2.54-1*3P针",
+            "BOM_Supplier Part": "C49257",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "7e70b923819e4f3bb9fdeaf4abdca9d3",
+            "uuid": "21f8f80a3f7c3c2b00b33f71a31ff6ef"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x4",
+          1,
+          "HDR-TH_4P-P2.54-V-M",
+          "J_CHINA1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Ckmtw(灿科盟)",
+            "BOM_Manufacturer Part": "B-2100S04P-A110",
+            "BOM_Supplier Part": "C124378",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "89f5280378144b629de4998ef974b6b8",
+            "uuid": "58557ab5dac544259249b4981dd6020c"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x8",
+          1,
+          "HDR-TH_8P-P2.54-V-M",
+          "J_SWITCHES",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Ckmtw(灿科盟)",
+            "BOM_Manufacturer Part": "B-2100S08P-A110",
+            "BOM_Supplier Part": "C124381",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "7142253ac24c42e1954a7f7d1d66b136",
+            "uuid": "c99800e04af1474aaf1069c95dc7e57a"
+          }
+        ]
+      ],
+      "updateTime": 1686996569,
+      "createTime": 1685854822,
+      "histories": [],
+      "created_at": "2023-06-04 15:00:22",
+      "updated_at": "2023-06-17 20:09:29"
+    },
+    {
+      "uuid": "00d9e48941fc6a1cd42a99c3569373c5",
+      "puuid": "6066edd8125716f79e729fba1da73f70",
+      "title": "PCB_THQ Right Throttle Switches Board",
+      "filename": "PCB_THQ Right Throttle Switches Board.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7e70b923819e4f3bb9fdeaf4abdca9d3": 2,
+        "89f5280378144b629de4998ef974b6b8": 1,
+        "7142253ac24c42e1954a7f7d1d66b136": 1
+      },
+      "BOM": [],
+      "updateTime": 1687008110,
+      "createTime": 1686995082,
+      "histories": [],
+      "created_at": "2023-06-17 19:44:42",
+      "updated_at": "2023-06-17 23:21:50"
+    }
+  ],
+  "sort": [],
+  "title": "THQ Right Throttle Switches Board",
+  "foldername": "THQ Right Throttle Switches Board",
+  "schfilename": "THQ Right Throttle Switches Board.json",
+  "schfilemtime": 1686996569280
+}

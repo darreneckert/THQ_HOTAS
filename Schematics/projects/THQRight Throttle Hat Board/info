@@ -4,7 +4,7 @@
   "name": "THQRight Throttle Hat Board",
   "content": "",
   "created_at": "2023-06-04 15:14:13",
-  "updated_at": "2023-06-17 22:13:11",
+  "updated_at": "2023-06-17 23:24:18",
   "stick": "",
   "documents": [
     {
@@ -77,11 +77,11 @@
         "fd9fc9865419407ab6a588b47dec0227": 1
       },
       "BOM": [],
-      "updateTime": 1687003991,
+      "updateTime": 1687008258,
       "createTime": 1686994166,
       "histories": [],
       "created_at": "2023-06-17 19:29:26",
-      "updated_at": "2023-06-17 22:13:11"
+      "updated_at": "2023-06-17 23:24:18"
     }
   ],
   "sort": [],
