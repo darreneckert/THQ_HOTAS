@@ -26,8 +26,8 @@ int sHat[hBtns] = {0, 3, 4, 2};       // 5-Way Hat U/R/D/L
 int sBtn[uBtns] = {1,                 // 5-Way Hat Push switch,   HID button 0
                    15,                // TDC Push switch,         HID button 1
                    6, 7,              // 2-Way Speedbrake switch, HID buttons 2 and 3
-                   8, 9,              // 2-Way Comms switch,      HID buttons 3 and 4
-                   10, 14, 16};       // 3-Way Misc switch,       HID buttons 5, 6 and 7
+                   8, 9,              // 2-Way Comms switch,      HID buttons 4 and 5
+                   10, 14, 16};       // 3-Way Misc switch,       HID buttons 6, 7 and 8
 
 
 // Define Analog pins for each axis

@@ -1,0 +1,92 @@
+{
+  "uuid": "9749983a7765f483a9fd6a6843aa1e6f",
+  "path": "Offline/THQRight%20Throttle%20Hat%20Board",
+  "name": "THQRight Throttle Hat Board",
+  "content": "",
+  "created_at": "2023-06-04 15:14:13",
+  "updated_at": "2023-06-26 21:55:21",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "485827d8c992ea6fac412fdd199a2b76",
+      "title": "Hat Board",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "17eb339750ed2e3756214c176201643d": 1,
+        "c996990367134df4854174670f257897": 5
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Male-2.54_1x2",
+          5,
+          "HDR-TH_2P-P2.54-V-M-1",
+          "J_DOWN,J_LEFT,J_PUSH,J_RIGHT,J_UP",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "TE Connectivity(美国泰科)",
+            "BOM_Manufacturer Part": "826629-2",
+            "BOM_Supplier Part": "C86471",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "7ae61b24ec5d431087f34ea7cfebbd9e",
+            "uuid": "c996990367134df4854174670f257897"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x6",
+          1,
+          "HDR-TH_6P-P2.54-V-M-1",
+          "J_HAT",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE(博穆精密)",
+            "BOM_Manufacturer Part": "2.54-1x6P直针",
+            "BOM_Supplier Part": "C37208",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "fd9fc9865419407ab6a588b47dec0227",
+            "uuid": "17eb339750ed2e3756214c176201643d"
+          }
+        ]
+      ],
+      "updateTime": 1686996588,
+      "createTime": 1685855654,
+      "histories": [],
+      "created_at": "2023-06-04 15:14:14",
+      "updated_at": "2023-06-17 20:09:48"
+    },
+    {
+      "uuid": "49cd77e50205ea6415da05f3aae52841",
+      "puuid": "9749983a7765f483a9fd6a6843aa1e6f",
+      "title": "PCB_THQRight Throttle Hat Board",
+      "filename": "PCB_THQRight Throttle Hat Board.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7ae61b24ec5d431087f34ea7cfebbd9e": 5,
+        "fd9fc9865419407ab6a588b47dec0227": 1
+      },
+      "BOM": [],
+      "updateTime": 1687780521,
+      "createTime": 1686994166,
+      "histories": [],
+      "created_at": "2023-06-17 19:29:26",
+      "updated_at": "2023-06-26 21:55:21"
+    }
+  ],
+  "sort": [],
+  "title": "THQRight Throttle Hat Board",
+  "foldername": "THQRight Throttle Hat Board",
+  "schfilename": "THQRight Throttle Hat Board.json",
+  "schfilemtime": 1686996588260
+}

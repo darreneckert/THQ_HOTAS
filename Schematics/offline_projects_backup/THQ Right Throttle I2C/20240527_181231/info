@@ -1,0 +1,92 @@
+{
+  "uuid": "e64be4b0cb77769ccb7aae3fe4c53f5b",
+  "path": "Offline/THQ%20Right%20Throttle%20I2C",
+  "name": "THQ Right Throttle I2C",
+  "content": "Modified version of existing right throttle main board, updated to use i2c communication to upgraded warthog slew sensor in place of the Arduino joystick. This sensor requires the use of a 3.3V Pro Micro board, or implementation of a 3.3V regulator for the power going to the sensor. This first version will use a 3.3V Arduino",
+  "created_at": "2024-05-27 17:39:46",
+  "updated_at": "2024-05-27 18:12:31",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a7213d3bdc3d1bd5612ac495f78255f1",
+      "title": "Main Board",
+      "description": "",
+      "docType": "1",
+      "master": "da795d8b8017d6deb1d41bec135f6fd5",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5824e76cf8244fdb8c1fa5646a05fe0d": 1,
+        "7ae8c0ee28654898ac5e51d4df53cec5": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Molex Picoblade 5P",
+          1,
+          "MOLEX PICOBLADE 5P THROUGH HOLE",
+          "J_SLEW",
+          {
+            "Manufacturer Part": "Molex Picoblade 5P",
+            "Contributor": "PantherLtd",
+            "spiceSymbolName": "Molex Picoblade 5P",
+            "puuid": "f4a6dfe209c1438bb1318b218fc9c632",
+            "uuid": "7ae8c0ee28654898ac5e51d4df53cec5"
+          }
+        ],
+        [
+          "IC - ARDUINO PRO MICRO",
+          1,
+          "ARDUINOPROMICRO",
+          "U_CTRLR",
+          {
+            "Manufacturer": "",
+            "Manufacturer Part": "",
+            "Supplier Part": "",
+            "Supplier": "",
+            "link": "",
+            "Contributor": "BauerTechnology",
+            "spiceSymbolName": "IC - ARDUINO PRO MICRO",
+            "puuid": "9e1109ccc07843a3af7eab17670ea305",
+            "uuid": "5824e76cf8244fdb8c1fa5646a05fe0d"
+          }
+        ]
+      ],
+      "updateTime": 1716797551,
+      "createTime": 1716795587,
+      "histories": [],
+      "created_at": "2024-05-27 17:39:47",
+      "updated_at": "2024-05-27 18:12:31"
+    },
+    {
+      "uuid": "c26568aca86d9236aa6a8ce443c8025c",
+      "puuid": "e64be4b0cb77769ccb7aae3fe4c53f5b",
+      "title": "PCB_THQ Right Throttle I2C",
+      "filename": "PCB_THQ Right Throttle I2C.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f4a6dfe209c1438bb1318b218fc9c632": 1,
+        "9e1109ccc07843a3af7eab17670ea305": 1
+      },
+      "BOM": [],
+      "updateTime": 1716797549,
+      "createTime": 1716797549,
+      "histories": [],
+      "created_at": "2024-05-27 18:12:29",
+      "updated_at": "2024-05-27 18:12:29"
+    }
+  ],
+  "sort": [],
+  "title": "THQ Right Throttle I2C",
+  "foldername": "THQ Right Throttle I2C",
+  "schfilename": "THQ Right Throttle I2C.json",
+  "schfilemtime": 1716797551803
+}

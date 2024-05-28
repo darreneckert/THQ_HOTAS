@@ -4,7 +4,7 @@
   "name": "THQ Right Throttle Main Board",
   "content": "",
   "created_at": "2023-06-04 12:28:46",
-  "updated_at": "2023-06-17 22:15:12",
+  "updated_at": "2023-07-16 10:58:16",
   "stick": "",
   "documents": [
     {
@@ -85,11 +85,11 @@
           }
         ]
       ],
-      "updateTime": 1686996547,
+      "updateTime": 1689469096,
       "createTime": 1685845726,
       "histories": [],
       "created_at": "2023-06-04 12:28:46",
-      "updated_at": "2023-06-17 20:09:07"
+      "updated_at": "2023-07-16 10:58:16"
     },
     {
       "uuid": "6c5a847ff39c85550b4369422448cf36",
@@ -107,11 +107,33 @@
         "10e01c7b031d4b08906e60b1db65df23": 1
       },
       "BOM": [],
-      "updateTime": 1687004112,
+      "updateTime": 1689469031,
       "createTime": 1686996133,
       "histories": [],
       "created_at": "2023-06-17 20:02:13",
-      "updated_at": "2023-06-17 22:15:12"
+      "updated_at": "2023-07-16 10:57:11"
+    },
+    {
+      "uuid": "f85082f3bd19dc51defd810e3d250c81",
+      "puuid": "f19d3d11b7d5b01e428d3e8c7eec78a2",
+      "title": "PCB_THQ Right Throttle Main Board_2",
+      "filename": "PCB_THQ Right Throttle Main Board_2.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f9ba132bc5484961b4e8b9bdae30902f": 1,
+        "89f178ce6e8047928551eab7128d4352": 1,
+        "a3d3973f0327482c91c37da8fa70f189": 1,
+        "10e01c7b031d4b08906e60b1db65df23": 1
+      },
+      "BOM": [],
+      "updateTime": 1689469081,
+      "createTime": 1687778707,
+      "histories": [],
+      "created_at": "2023-06-26 21:25:07",
+      "updated_at": "2023-07-16 10:58:01"
     }
   ],
   "sort": [
@@ -121,5 +143,5 @@
   "title": "THQ Right Throttle Main Board",
   "foldername": "THQ Right Throttle Main Board",
   "schfilename": "THQ Right Throttle Main Board.json",
-  "schfilemtime": 1686996547372
+  "schfilemtime": 1689469096256
 }
