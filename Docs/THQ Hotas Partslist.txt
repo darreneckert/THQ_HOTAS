@@ -6,10 +6,10 @@ Hat Switches (2x 2-Way, 1x 3-Way, 1x 5-Way) - https://www.thingiverse.com/thing:
 
 12x 0.7mm SPST Micro Tactile Switch - https://www.jaycar.com.au/0-7mm-spst-micro-tactile-switch/p/SP0600
 
-Arduino 2-Axis joystick module (Cap protrudes quite a bit, may need to find alternative cap/module) - https://www.jaycar.com.au/arduino-compatible-x-and-y-axis-joystick-module/p/XC4422
+Warthog slew sensor upgrade module, requires 3.3V so need 3.3V/8MHz version of Pro Micro - https://www.aliexpress.com/item/1005002554918990.html?spm=a2g0o.order_list.order_list_main.10.64db1802wJn1Tb
 
-Arduino Pro Micro/clone - https://www.aliexpress.com/item/32887074671.html?spm=a2g0o.order_list.order_list_main.5.20321802q9RPKB
+3.3V Arduino Pro Micro - https://www.aliexpress.com/item/1348800135.html?spm=a2g0o.order_list.order_list_main.21.64db1802wJn1Tb
 
-PCB - https://www.jaycar.com.au/universal-pre-punched-experimenters-board-small/p/HP9550
+Prototype boards manufactured thru PCBWay/JLCPCB, designed using EasyEDA
 
 Various wires and connectors
