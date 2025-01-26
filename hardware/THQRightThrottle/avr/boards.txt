@@ -1,0 +1,31 @@
+THQRightThrottle.name=THQ Right Throttle
+        
+THQRightThrottle.upload.tool=arduino:avrdude
+THQRightThrottle.upload.protocol=avr109
+THQRightThrottle.upload.maximum_size=28672
+THQRightThrottle.upload.maximum_data_size=2560
+THQRightThrottle.upload.speed=57600
+THQRightThrottle.upload.disable_flushing=true
+THQRightThrottle.upload.use_1200bps_touch=true
+THQRightThrottle.upload.wait_for_upload_port=true
+THQRightThrottle.bootloader.tool=arduino:avrdude
+THQRightThrottle.bootloader.low_fuses=0xff
+THQRightThrottle.bootloader.high_fuses=0xd8
+THQRightThrottle.bootloader.extended_fuses=0xcb
+THQRightThrottle.bootloader.file=caterina/Caterina-Leonardo.hex
+THQRightThrottle.bootloader.unlock_bits=0x3F
+THQRightThrottle.bootloader.lock_bits=0x2F     
+THQRightThrottle.build.mcu=atmega32u4
+THQRightThrottle.build.f_cpu=16000000L
+
+
+THQRightThrottle.build.vid=0x2355
+THQRightThrottle.build.pid=0x8052
+THQRightThrottle.build.usb_product="THQ Right Throttle"
+
+
+THQRightThrottle.build.usb_manufacturer="CheapArse Flight Gear"
+THQRightThrottle.build.board=AVR_LEONARDO
+THQRightThrottle.build.core=arduino:arduino
+THQRightThrottle.build.variant=arduino:leonardo
+THQRightThrottle.build.extra_flags={build.usb_flags}

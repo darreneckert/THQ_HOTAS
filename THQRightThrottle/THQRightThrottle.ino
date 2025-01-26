@@ -22,8 +22,8 @@ const int tDelay = 50;                // Time delay for loop() in ms, may need a
 int i;                                // Generic counter
 
 // Define digital pin to be used for each  button
-int sHat[hBtns] = {0, 3, 4, 2};       // 5-Way Hat U/R/D/L
-int sBtn[uBtns] = {1,                 // 5-Way Hat Push switch,   HID button 0
+int sHat[hBtns] = {0, 1, 4, 2};       // 5-Way Hat U/R/D/L
+int sBtn[uBtns] = {3,                 // 5-Way Hat Push switch,   HID button 0
                    15,                // TDC Push switch,         HID button 1
                    6, 7,              // 2-Way Speedbrake switch, HID buttons 2 and 3
                    8, 9,              // 2-Way Comms switch,      HID buttons 4 and 5
@@ -84,8 +84,13 @@ void loop() {
   // Check for change in state of each hat direction and if it has changed send new state to HID
   for (i=0; i<hBtns; i++)  {
     hBtn_CurrState = !digitalRead(sHat[i]);
+    Serial.print("Current state of sHat[");
+    Serial.print(i);
+    Serial.print("] = ");
+    Serial.println(hBtn_CurrState);
     if (hBtn_CurrState != hBtn_LastState[i]) {
       hVal_Changed = true;
+      Serial.println("State changed from last check");
       hBtn_LastState[i] = hBtn_CurrState;
     }
   }
