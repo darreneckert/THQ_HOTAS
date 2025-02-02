@@ -24,15 +24,15 @@ int i;                                // Generic counter
 // Define digital pin to be used for each  button
 int sHat[hBtns] = {0, 1, 4, 2};       // 5-Way Hat U/R/D/L
 int sBtn[uBtns] = {3,                 // 5-Way Hat Push switch,   HID button 0
-                   15,                // TDC Push switch,         HID button 1
-                   6, 7,              // 2-Way Speedbrake switch, HID buttons 2 and 3
-                   8, 9,              // 2-Way Comms switch,      HID buttons 4 and 5
-                   10, 14, 16};       // 3-Way Misc switch,       HID buttons 6, 7 and 8
+                   6, 7,              // 2-Way Speedbrake switch, HID buttons 1 and 2
+                   8, 9,              // 2-Way Comms switch,      HID buttons 3 and 4
+                   10, 14, 16,         // 3-Way Misc switch,      HID buttons 5, 6 and 7
+                   15};                // TDC Push switch         HID button 8
 
 
 // Define Analog pins for each axis
-const int xTDC_Axis  = A0;            // Analog pin for TDC X-Axis
-const int yTDC_Axis  = A1;            // Analog pin for TDC Y-Axis
+const int xTDC_Axis  = A3;            // Analog pin for TDC X-Axis
+const int yTDC_Axis  = A2;            // Analog pin for TDC Y-Axis
   
 
 // Default states for axes and buttons
@@ -51,11 +51,15 @@ const bool initAutoSendState = true;
 
 
 void setup() {
+  pinMode(xTDC_Axis, INPUT);
+  pinMode(yTDC_Axis, INPUT);
+
   // Initialise digital pin modes and enable pull-up resistors
-  for (i=0; i<uBtns; i++) {
+  for (i=0; i<uBtns-1; i++) {
     pinMode(sBtn[i], INPUT);
     digitalWrite (sBtn[i], HIGH);
   }
+  digitalWrite (sBtn[8], LOW);     // TDC Push needs to be reversed else it reads as pushed when not
 
   for (i=0; i<hBtns; i++) {
     pinMode(sHat[i], INPUT);
@@ -73,24 +77,30 @@ void loop() {
   // Read axes and send to HID
   // X-Axis
   xTDC = analogRead(xTDC_Axis);
+  Serial.print("X Axis = ");
+  Serial.print(xTDC);
   xTDC = map(xTDC, 0, 1023, 0, 255);   // scale resolution to reduce jittering, need to test if necessary
+  Serial.print(", mapping to ");
+  Serial.println(xTDC);
   THQ.setXAxis(xTDC);
 
   // Y-Axis
   yTDC = analogRead(yTDC_Axis);
+  Serial.print(", Y Axis = ");
+  Serial.println(yTDC);
   yTDC = map(yTDC, 0, 1023, 0, 255);  // scale resolution to reduce jittering, need to test if necessary
   THQ.setYAxis(yTDC);
 
   // Check for change in state of each hat direction and if it has changed send new state to HID
   for (i=0; i<hBtns; i++)  {
     hBtn_CurrState = !digitalRead(sHat[i]);
-    Serial.print("Current state of sHat[");
-    Serial.print(i);
-    Serial.print("] = ");
-    Serial.println(hBtn_CurrState);
+   // Serial.print("Current state of sHat[");
+   // Serial.print(i);
+   // Serial.print("] = ");
+   // Serial.println(hBtn_CurrState);
     if (hBtn_CurrState != hBtn_LastState[i]) {
       hVal_Changed = true;
-      Serial.println("State changed from last check");
+      //Serial.println("State changed from last check");
       hBtn_LastState[i] = hBtn_CurrState;
     }
   }
@@ -109,7 +119,7 @@ void loop() {
     if (hBtn_LastState[0] == 1) {
       THQ.setHatSwitch(0, 0);
       #ifdef DEBUGTHQ 
-        Serial.println("POV Up pressed!"); 
+        //Serial.println("POV Up pressed!"); 
       #endif
     }
     // Right Switch pressed
@@ -128,25 +138,20 @@ void loop() {
   }
 
   // Check for change in state of each button and if it has changed send new state to HID
-  for (i=0; i<uBtns; i++) {
+  for (i=0; i<uBtns-1; i++) {
     sBtn_CurrState = !digitalRead(sBtn[i]);
     if (sBtn_CurrState != sBtn_LastState[i]) {
       THQ.setButton(i, sBtn_CurrState);
       sBtn_LastState[i] = sBtn_CurrState;  
-      #ifdef DEBUGTHQ
-        if (sBtn_CurrState == HIGH) {
-          Serial.print("Button ");
-          Serial.print(i);
-          Serial.println(" pressed");
-        }
-        if (sBtn_CurrState == LOW) {
-          Serial.print("Button ");
-          Serial.print(i);
-          Serial.println(" released");
-        }
-      #endif
+
     }
   }
+  sBtn_CurrState = digitalRead(sBtn[uBtns-1]);
+    if (sBtn_CurrState != sBtn_LastState[uBtns-1]) {
+      THQ.setButton(uBtns-1, sBtn_CurrState);
+      sBtn_LastState[uBtns-1] = sBtn_CurrState;  
+
+    }
 
   delay (tDelay);
 }
