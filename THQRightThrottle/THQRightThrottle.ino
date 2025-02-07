@@ -77,18 +77,20 @@ void loop() {
   // Read axes and send to HID
   // X-Axis
   xTDC = analogRead(xTDC_Axis);
-  Serial.print("X Axis = ");
-  Serial.print(xTDC);
+  //Serial.print("X Axis = ");
+  //Serial.print(xTDC);
   xTDC = map(xTDC, 0, 1023, 0, 255);   // scale resolution to reduce jittering, need to test if necessary
-  Serial.print(", mapping to ");
-  Serial.println(xTDC);
+  //Serial.print(", mapping to ");
+  //Serial.println(xTDC);
   THQ.setXAxis(xTDC);
 
   // Y-Axis
   yTDC = analogRead(yTDC_Axis);
-  Serial.print(", Y Axis = ");
-  Serial.println(yTDC);
+  //Serial.print(", Y Axis = ");
+  //Serial.println(yTDC);
   yTDC = map(yTDC, 0, 1023, 0, 255);  // scale resolution to reduce jittering, need to test if necessary
+  //Serial.print(", mapping to ");
+  //Serial.println(yTDC);
   THQ.setYAxis(yTDC);
 
   // Check for change in state of each hat direction and if it has changed send new state to HID
